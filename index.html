@@ -5,61 +5,174 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yerson Josué Yareta Halanoca | CV</title>
 <meta name="description" content="CV de Yerson Josué Yareta Halanoca, estudiante de APSTI. Fibra óptica, mantenimiento de computadoras, HTML, CSS, JavaScript, Python y WordPress.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 <style>
+/* ============ 1. COLORES ============ */
 :root{
-  --navy:#102a43; --teal:#087e8b; --mint:#8ff3e8;
-  --bg:#eef2f6; --paper:#fff; --text:#334155; --muted:#64748b;
-  --chip:#eaf5f6; --chip-b:#d3e8ea; --line:#e2e8f0; --h:#102a43;
+  --ink:#14213d;        /* azul tinta (barra lateral) */
+  --ink-2:#1d3057;
+  --gold:#b8935a;       /* dorado champagne */
+  --gold-soft:#e6d3b0;
+  --bg:#f3f1ec;
+  --paper:#fdfcfa;
+  --text:#3d4452;
+  --heading:#14213d;
+  --muted:#7a8190;
+  --chip:#f4efe6;
+  --chip-border:#e6dcc9;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#0b1620; --paper:#12202d; --text:#cbd5e1; --muted:#94a3b8;
-    --chip:#183142; --chip-b:#24485c; --line:#223446; --h:#e6f1f5;}
+  :root{
+    --bg:#0c1220;
+    --paper:#131b2e;
+    --text:#c9cfdb;
+    --heading:#f1e8d6;
+    --muted:#8e97aa;
+    --chip:#1b2640;
+    --chip-border:#2c3a5c;
+  }
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;padding:40px 16px}
-.cv{max-width:1050px;margin:auto;background:var(--paper);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:300px 1fr;box-shadow:0 18px 50px rgba(16,42,67,.15)}
 
-/* Barra lateral */
-aside{background:linear-gradient(170deg,var(--navy),#0a5f6b);color:#fff;padding:36px 26px}
-.photo{width:170px;height:200px;object-fit:cover;object-position:center 25%;border-radius:14px;border:4px solid rgba(255,255,255,.75);display:block;margin:0 auto 24px;background:#0a4f5a}
-aside h2{font-size:15px;font-weight:700;color:var(--mint);margin:26px 0 10px;padding-bottom:6px;border-bottom:1px solid rgba(255,255,255,.2)}
+/* ============ 2. BASE ============ */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+  padding:40px 16px;
+}
+p{font-size:14.5px;max-width:68ch}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* ============ 3. ESTRUCTURA ============ */
+.cv{
+  max-width:1050px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:300px 1fr;
+  background:var(--paper);
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 20px 55px rgba(20,33,61,.18);
+}
+
+/* ============ 4. BARRA LATERAL ============ */
+aside{
+  background:linear-gradient(175deg,var(--ink),var(--ink-2));
+  color:#fff;
+  padding:38px 26px;
+}
+.photo{
+  display:block;
+  width:170px;height:200px;
+  margin:0 auto 26px;
+  object-fit:cover;
+  object-position:center 25%;
+  border-radius:10px;
+  border:3px solid var(--gold);
+  background:var(--ink-2);
+}
+aside h2{
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  font-weight:600;
+  color:var(--gold-soft);
+  margin:28px 0 10px;
+  padding-bottom:7px;
+  border-bottom:1px solid rgba(230,211,176,.35);
+}
 aside ul{list-style:none;font-size:13.5px}
 aside li{padding:3px 0;word-break:break-word}
 aside a{color:#fff;text-decoration:none}
-aside a:hover,aside a:focus-visible{text-decoration:underline}
+aside a:hover{color:var(--gold-soft);text-decoration:underline}
 
-/* Contenido */
-main{padding:42px 44px}
-header{margin-bottom:30px}
-h1{font-size:32px;font-weight:800;line-height:1.2;color:var(--h)}
-.role{color:var(--teal);font-weight:600;font-size:16px;margin-top:6px}
+.btn{
+  width:100%;
+  margin-top:26px;
+  padding:10px;
+  background:var(--gold);
+  color:#fff;
+  border:0;
+  border-radius:6px;
+  font:600 13.5px 'Inter',sans-serif;
+  cursor:pointer;
+  transition:background .2s;
+}
+.btn:hover{background:#9f7c47}
+
+/* ============ 5. CONTENIDO ============ */
+main{padding:44px 46px}
+header{
+  margin-bottom:32px;
+  padding-bottom:22px;
+  border-bottom:1px solid var(--chip-border);
+}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  font-weight:700;
+  line-height:1.2;
+  color:var(--heading);
+}
+.role{margin-top:8px;font-size:15.5px;font-weight:500;color:var(--gold)}
+
 section{margin-bottom:30px}
-h3.t{font-size:18px;font-weight:700;color:var(--h);border-left:5px solid var(--teal);padding-left:12px;margin-bottom:14px}
-p{font-size:14.5px;max-width:68ch}
-.card{background:var(--chip);border:1px solid var(--chip-b);border-radius:10px;padding:16px 18px}
-.card b{color:var(--h)}
-.card p+p{margin-top:2px}
+.title{
+  font-family:'Playfair Display',serif;
+  font-size:20px;
+  font-weight:600;
+  color:var(--heading);
+  margin-bottom:14px;
+  padding-left:12px;
+  border-left:3px solid var(--gold);
+}
 
-.group{margin-bottom:16px}
-.group h4{font-size:14px;color:var(--h);margin-bottom:8px;font-weight:700}
-.group h4 small{font-weight:500;color:var(--muted)}
+/* ============ 6. COMPONENTES ============ */
+.card{
+  background:var(--chip);
+  border:1px solid var(--chip-border);
+  border-radius:8px;
+  padding:16px 18px;
+}
+.card b{color:var(--heading)}
+
+.group{margin-bottom:18px}
+.group h4{font-size:14px;font-weight:600;color:var(--heading);margin-bottom:8px}
+.group small{font-weight:400;color:var(--muted)}
+
 .chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--chip);border:1px solid var(--chip-b);border-radius:999px;padding:5px 14px;font-size:13.5px;font-weight:600;color:var(--h)}
+.chip{
+  padding:5px 14px;
+  background:var(--chip);
+  border:1px solid var(--chip-border);
+  border-radius:999px;
+  font-size:13.5px;
+  font-weight:500;
+  color:var(--heading);
+}
 
-.btn{margin-top:22px;width:100%;background:var(--mint);color:var(--navy);border:0;border-radius:8px;padding:10px;font:700 13.5px 'Inter',sans-serif;cursor:pointer}
-.btn:hover{filter:brightness(.93)}
-:focus-visible{outline:3px solid var(--mint);outline-offset:2px}
-footer{grid-column:1/-1;background:var(--navy);color:#cfe3ea;text-align:center;font-size:12px;padding:16px}
+footer{
+  grid-column:1/-1;
+  padding:16px;
+  background:var(--ink);
+  color:var(--gold-soft);
+  text-align:center;
+  font-size:12px;
+}
 
+/* ============ 7. CELULAR ============ */
 @media(max-width:800px){
   .cv{grid-template-columns:1fr}
   main{padding:28px 22px}
-  h1{font-size:26px}
+  h1{font-size:28px}
 }
+
+/* ============ 8. IMPRESIÓN ============ */
 @media print{
   body{background:#fff;padding:0}
   .cv{box-shadow:none;border-radius:0}
@@ -68,9 +181,11 @@ footer{grid-column:1/-1;background:var(--navy);color:#cfe3ea;text-align:center;f
 }
 </style>
 </head>
+
 <body>
 <div class="cv">
 
+  <!-- ===== BARRA LATERAL ===== -->
   <aside>
     <img class="photo" src="./mifoto.jpg" alt="Fotografía de Yerson Josué Yareta Halanoca">
 
@@ -94,4 +209,80 @@ footer{grid-column:1/-1;background:var(--navy);color:#cfe3ea;text-align:center;f
     <button class="btn" onclick="window.print()">Guardar como PDF</button>
   </aside>
 
+  <!-- ===== CONTENIDO ===== -->
   <main>
+
+    <header>
+      <h1>Yerson Josué<br>Yareta Halanoca</h1>
+      <p class="role">Estudiante de Arquitectura de Plataformas y Servicios de TI</p>
+    </header>
+
+    <section>
+      <h3 class="title">Perfil profesional</h3>
+      <p>
+        Estudiante del V semestre de Arquitectura de Plataformas y Servicios de
+        Tecnologías de la Información (APSTI). Tengo conocimientos en
+        mantenimiento de computadoras, fibra óptica, ofimática y diseño digital,
+        y estoy aprendiendo desarrollo web con HTML, CSS, JavaScript y Python,
+        además de crear páginas en WordPress. Soy responsable, me adapto con
+        facilidad y trabajo bien en equipo. Busco fortalecer mis competencias y
+        crecer en el sector tecnológico.
+      </p>
+    </section>
+
+    <section>
+      <h3 class="title">Formación académica</h3>
+      <div class="card">
+        <p><b>Instituto de Educación Superior Tecnológico Público Santa Lucía</b></p>
+        <p>Arquitectura de Plataformas y Servicios de TI (APSTI)</p>
+        <p>V semestre · Ingreso en 2024</p>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="title">Conocimientos técnicos</h3>
+
+      <div class="group">
+        <h4>Desarrollo web y programación <small>(nivel básico)</small></h4>
+        <div class="chips">
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Python</span>
+          <span class="chip">WordPress</span>
+          <span class="chip">Visual Studio Code</span>
+          <span class="chip">GitHub Pages</span>
+        </div>
+      </div>
+
+      <div class="group">
+        <h4>Redes y hardware</h4>
+        <div class="chips">
+          <span class="chip">Fibra óptica</span>
+          <span class="chip">Mantenimiento de computadoras</span>
+        </div>
+      </div>
+
+      <div class="group">
+        <h4>Ofimática y diseño</h4>
+        <div class="chips">
+          <span class="chip">Microsoft Excel</span>
+          <span class="chip">Microsoft Word</span>
+          <span class="chip">Adobe Photoshop</span>
+          <span class="chip">AutoCAD</span>
+          <span class="chip">Filmora (edición de video)</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="title">Cursos y capacitaciones</h3>
+      <div class="card"><p><b>Curso de CRESCITEC</b></p></div>
+    </section>
+
+  </main>
+
+  <footer>Currículum Vitae © 2026 · Yerson Josué Yareta Halanoca</footer>
+</div>
+</body>
+</html>
